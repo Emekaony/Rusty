@@ -1,0 +1,1 @@
+Trying to get a systems engineering role, or any role where I can use rust a lot.

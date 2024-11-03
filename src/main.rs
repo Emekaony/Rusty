@@ -150,17 +150,18 @@ fn higher_order_stuff() {
     }
 
     #[allow(unused_variables)]
-    fn main() {
-        let nums: (i32, i32) = (10, 0);
+    fn run() {
+        let nums: (i32, i32) = (10, 2);
 
         let op1: Operations = Operations::Add;
         let op2: Operations = Operations::Subtract;
         let op3: Operations = Operations::Multiply;
         let op4: Operations = Operations::Divide;
 
-        let result: i32 = calculate(nums.0, nums.1, &op4);
+        let result: i32 = calculate(nums.0, nums.1, &op1);
         println!("{}", result);
     }
+    run();
 }
 
 fn main() {
