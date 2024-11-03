@@ -13,13 +13,18 @@ impl Employee {
         )
     }
 
+    fn mutate_name(&mut self, new_name: String) {
+        println!("Changing firstname from {} to {}", self.firstname, new_name);
+        self.firstname = new_name;
+    }
+
     fn static_details() -> String {
         String::from("Details of a person")
     }
 }
 
 fn main() {
-    let emp: Employee = Employee {
+    let mut emp: Employee = Employee {
         firstname: "Nnaemeka".to_string(),
         company: "Rhombus".to_string(),
         age: 23,
@@ -28,4 +33,8 @@ fn main() {
     println!("{:?}", emp);
     // when using static functions, use the :: thing not the dot notation
     println!("static employee details: {}", Employee::static_details());
+
+    // I would say I have a decent understanding of rust ownsership rules tbh (besides lifetimes).
+    emp.mutate_name(String::from("Kamsi"));
+    println!("{}", emp.firstname);
 }
