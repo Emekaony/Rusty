@@ -22,7 +22,7 @@ impl Employee {
         String::from("Details of a person")
     }
 }
-
+#[derive(Debug)]
 enum Color {
     Red,
     Green,
