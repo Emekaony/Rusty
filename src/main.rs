@@ -1,6 +1,10 @@
+use crate::houses;
 use crate::Color::Green;
+use crate::Person::Name;
+
 mod audio;
 mod haha;
+mod houses;
 mod utilities;
 
 #[derive(Debug)]
@@ -35,6 +39,11 @@ enum Color {
     Blue,
 }
 
+#[derive(Debug)]
+enum Person {
+    Name(String),
+}
+
 fn main() {
     let mut emp: Employee = Employee {
         firstname: "Nnaemeka".to_string(),
@@ -58,4 +67,7 @@ fn main() {
     println!("{}", utilities::math::sum(10, 20));
 
     audio::fourier::implement_fourier_transform();
+
+    let person = Name("emeka".to_string());
+    println!("{:?}", person);
 }
