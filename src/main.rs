@@ -5,6 +5,7 @@ mod audio;
 mod haha;
 mod house;
 mod player;
+mod using_traits;
 mod utilities;
 
 #[derive(Debug)]
