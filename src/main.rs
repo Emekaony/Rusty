@@ -108,13 +108,61 @@ fn function_module() {
     //     original
     // };
     let sum = |a: i32, b: i32| a + b;
-    let nums: (i32, i32) = (1, 2);
+    let nums: (i32, i32) = (22, -23);
     println!(
         "Sum of {} and {} is {}",
         nums.0,
         nums.1,
         sum(nums.0, nums.1)
     );
+}
+
+fn higher_order_stuff() {
+    enum Operations {
+        Add,
+        Subtract,
+        Divide,
+        Multiply,
+    }
+
+    fn add(a: i32, b: i32) -> i32 {
+        a + b
+    }
+
+    fn multiply(a: i32, b: i32) -> i32 {
+        a * b
+    }
+
+    fn subtract(a: i32, b: i32) -> i32 {
+        a - b
+    }
+
+    fn divide(a: i32, b: i32) -> i32 {
+        assert!(b != 0, "Division by zero not allowed");
+        a / b
+    }
+
+    fn calculate(a: i32, b: i32, op: &Operations) -> i32 {
+        match *op {
+            Operations::Add => add(a, b),
+            Operations::Subtract => subtract(a, b),
+            Operations::Divide => divide(a, b),
+            Operations::Multiply => multiply(a, b),
+        }
+    }
+
+    #[allow(unused_variables)]
+    fn main() {
+        let nums: (i32, i32) = (10, 0);
+
+        let op1: Operations = Operations::Add;
+        let op2: Operations = Operations::Subtract;
+        let op3: Operations = Operations::Multiply;
+        let op4: Operations = Operations::Divide;
+
+        let result: i32 = calculate(nums.0, nums.1, &op4);
+        println!("{}", result);
+    }
 }
 
 fn main() {
