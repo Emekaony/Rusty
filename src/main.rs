@@ -53,7 +53,7 @@ enum DayOfTheWeek {
 
 static mut x: i32 = 10;
 
-fn main() {
+fn random_stuff() {
     let mut emp: Employee = Employee {
         firstname: "Nnaemeka".to_string(),
         company: "Rhombus".to_string(),
@@ -99,4 +99,24 @@ fn main() {
     unsafe {
         println!("x is unsafe but its value is: {}", x);
     }
+}
+
+fn function_module() {
+    // get back to this and fix the lifetime later!
+    // let append_to_string = |original: &mut String, to_add: &str| {
+    //     original.push_str(to_add);
+    //     original
+    // };
+    let sum = |a: i32, b: i32| a + b;
+    let nums: (i32, i32) = (1, 2);
+    println!(
+        "Sum of {} and {} is {}",
+        nums.0,
+        nums.1,
+        sum(nums.0, nums.1)
+    );
+}
+
+fn main() {
+    function_module();
 }
