@@ -1,5 +1,4 @@
 use crate::house::house::House;
-use crate::Color::Green;
 use crate::Person::Name;
 
 mod audio;
@@ -33,6 +32,7 @@ impl Employee {
     }
 }
 
+#[allow(dead_code)]
 #[derive(Debug)]
 enum Color {
     Red,
@@ -45,14 +45,14 @@ enum Person {
     Name(String),
 }
 
+#[allow(dead_code)]
 enum DayOfTheWeek {
     Monday,
     Tuesday,
     Wednesday,
 }
 
-static mut x: i32 = 10;
-
+#[allow(dead_code)]
 fn random_stuff() {
     let mut emp: Employee = Employee {
         firstname: "Nnaemeka".to_string(),
@@ -71,7 +71,6 @@ fn random_stuff() {
     // enums
     let my_color: Color = Color::Red;
     println!("{:?}", my_color);
-    let tt = Green;
 
     println!("{}", utilities::math::sum(10, 20));
 
@@ -96,11 +95,9 @@ fn random_stuff() {
         DayOfTheWeek::Tuesday => println!("It is Tuesday"),
         DayOfTheWeek::Wednesday => println!("It is Wednesday"),
     }
-    unsafe {
-        println!("x is unsafe but its value is: {}", x);
-    }
 }
 
+#[allow(dead_code)]
 fn function_module() {
     // get back to this and fix the lifetime later!
     // let append_to_string = |original: &mut String, to_add: &str| {
@@ -117,6 +114,7 @@ fn function_module() {
     );
 }
 
+#[allow(dead_code)]
 fn higher_order_stuff() {
     enum Operations {
         Add,
@@ -166,5 +164,6 @@ fn higher_order_stuff() {
 }
 
 fn main() {
-    function_module();
+    // function_module();
+    higher_order_stuff();
 }
