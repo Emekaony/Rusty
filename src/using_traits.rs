@@ -67,13 +67,13 @@ pub fn returning_traits() {
 
     impl Animal for Dog {
         fn speak(&self) -> String {
-            String::from("Dog is speaking")
+            String::from("Dog is speaking.")
         }
     }
 
     impl Animal for Cat {
         fn speak(&self) -> String {
-            String::from("Cat is speaking")
+            String::from("Cat is speaking.")
         }
     }
 
@@ -94,4 +94,8 @@ pub fn returning_traits() {
             Box::new(Cat {})
         }
     }
+    //dog
+    println!("{}", get_animal(3).speak());
+    // cat
+    println!("{}", get_animal(7).speak());
 }

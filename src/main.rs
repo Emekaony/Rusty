@@ -168,5 +168,6 @@ fn higher_order_stuff() {
 fn main() {
     // function_module();
     // higher_order_stuff();
-    using_traits::run();
+    // using_traits::run();
+    using_traits::returning_traits();
 }
