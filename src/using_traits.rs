@@ -1,7 +1,9 @@
+#[allow(dead_code)]
 struct RustDev {
     awesome: bool,
 }
 
+#[allow(dead_code)]
 struct JavaDev {
     awesome: bool,
 }
