@@ -12,6 +12,10 @@ impl Employee {
             self.firstname, self.age, self.company
         )
     }
+
+    fn static_details() -> String {
+        String::from("Details of a person")
+    }
 }
 
 fn main() {
@@ -22,4 +26,6 @@ fn main() {
     };
     println!("{}", emp.details());
     println!("{:?}", emp);
+    // when using static functions, use the :: thing not the dot notation
+    println!("static employee details: {}", Employee::static_details());
 }
