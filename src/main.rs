@@ -5,6 +5,7 @@ use crate::Person::Name;
 mod audio;
 mod haha;
 mod house;
+mod player;
 mod utilities;
 
 #[derive(Debug)]
@@ -44,6 +45,14 @@ enum Person {
     Name(String),
 }
 
+enum DayOfTheWeek {
+    Monday,
+    Tuesday,
+    Wednesday,
+}
+
+static mut x: i32 = 10;
+
 fn main() {
     let mut emp: Employee = Employee {
         firstname: "Nnaemeka".to_string(),
@@ -80,4 +89,14 @@ fn main() {
         "It is {} that h1 can contain Legion",
         h1.can_contain_legion()
     );
+
+    let today: DayOfTheWeek = DayOfTheWeek::Tuesday;
+    match today {
+        DayOfTheWeek::Monday => println!("It is Monday"),
+        DayOfTheWeek::Tuesday => println!("It is Tuesday"),
+        DayOfTheWeek::Wednesday => println!("It is Wednesday"),
+    }
+    unsafe {
+        println!("x is unsafe but its value is: {}", x);
+    }
 }
