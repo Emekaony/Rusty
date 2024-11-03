@@ -1,8 +1,4 @@
 use rand::{rngs::ThreadRng, Rng};
-
-use crate::archive::arch::arch_file;
-
-mod archive;
 mod player;
 
 fn main() {
@@ -23,7 +19,7 @@ mod clean {
     fn perform_cleanup_private() {
         println!("Cleaning private");
     }
-
+    #[allow(dead_code)]
     pub fn perform_cleanup_public() {
         println!("Cleaning up public");
     }
