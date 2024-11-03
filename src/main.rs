@@ -1,3 +1,8 @@
+use crate::Color::Green;
+mod audio;
+mod haha;
+mod utilities;
+
 #[derive(Debug)]
 struct Employee {
     firstname: String,
@@ -22,6 +27,7 @@ impl Employee {
         String::from("Details of a person")
     }
 }
+
 #[derive(Debug)]
 enum Color {
     Red,
@@ -47,4 +53,9 @@ fn main() {
     // enums
     let my_color: Color = Color::Red;
     println!("{:?}", my_color);
+    let tt = Green;
+
+    println!("{}", utilities::math::sum(10, 20));
+
+    audio::fourier::implement_fourier_transform();
 }
