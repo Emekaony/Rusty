@@ -167,5 +167,6 @@ fn higher_order_stuff() {
 
 fn main() {
     // function_module();
-    higher_order_stuff();
+    // higher_order_stuff();
+    using_traits::run();
 }
