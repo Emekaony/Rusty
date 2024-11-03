@@ -1,10 +1,10 @@
-use crate::houses;
+use crate::house::house::House;
 use crate::Color::Green;
 use crate::Person::Name;
 
 mod audio;
 mod haha;
-mod houses;
+mod house;
 mod utilities;
 
 #[derive(Debug)]
@@ -70,4 +70,14 @@ fn main() {
 
     let person = Name("emeka".to_string());
     println!("{:?}", person);
+
+    let h1: House = House {
+        number_of_floors: 1,
+        number_of_rooms: 3,
+    };
+    println!("It is {} that h1 is a duplex", h1.is_duplex());
+    println!(
+        "It is {} that h1 can contain Legion",
+        h1.can_contain_legion()
+    );
 }

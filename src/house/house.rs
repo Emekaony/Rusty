@@ -1,6 +1,6 @@
-struct House {
-    number_of_rooms: i8,
-    number_of_floors: i8,
+pub struct House {
+    pub number_of_rooms: i8,
+    pub number_of_floors: i8,
 }
 
 impl House {
