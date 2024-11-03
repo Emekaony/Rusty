@@ -23,6 +23,12 @@ impl Employee {
     }
 }
 
+enum Color {
+    Red,
+    Green,
+    Blue,
+}
+
 fn main() {
     let mut emp: Employee = Employee {
         firstname: "Nnaemeka".to_string(),
@@ -37,4 +43,8 @@ fn main() {
     // I would say I have a decent understanding of rust ownsership rules tbh (besides lifetimes).
     emp.mutate_name(String::from("Kamsi"));
     println!("{}", emp.firstname);
+
+    // enums
+    let my_color: Color = Color::Red;
+    println!("{:?}", my_color);
 }
