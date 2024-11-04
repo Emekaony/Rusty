@@ -14,6 +14,13 @@ trait Developer {
     fn say_hello() {
         println!("Hello world!");
     }
+    fn language_is_obsolete(&self) {
+        if self.language() == "Rust" {
+            println!("Language is not obsolete")
+        } else {
+            println!("Language is definitely obsolete!")
+        }
+    }
 }
 
 impl Developer for RustDev {
