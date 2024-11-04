@@ -44,6 +44,7 @@ impl Developer for JavaDev {
     }
 }
 
+#[allow(dead_code)]
 pub fn run() {
     let better_rust_dev: RustDev = RustDev::new(true);
     let better_java_dev: JavaDev = JavaDev::new(false);
