@@ -1,6 +1,7 @@
 use core::fmt;
 use std::ops::Add;
 
+mod learning_lifetimes;
 mod ownership;
 mod using_traits;
 #[derive(Debug)] // print out nicely
@@ -28,4 +29,5 @@ impl fmt::Display for Point {
 
 fn main() {
     ownership::run();
+    learning_lifetimes::run();
 }
