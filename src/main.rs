@@ -1,5 +1,8 @@
 use core::fmt;
 use std::ops::Add;
+
+mod ownership;
+mod using_traits;
 #[derive(Debug)] // print out nicely
 struct Point {
     x: f64,
@@ -24,9 +27,5 @@ impl fmt::Display for Point {
 }
 
 fn main() {
-    let mut p1: Point = Point { x: 2.3, y: 1.9 };
-    let p2: Point = Point { x: -2.2, y: 4.9 };
-
-    println!("{} + {} is {}", p1, p2, &p1 + &p2);
-    p1.x = 22.3;
+    ownership::run();
 }
