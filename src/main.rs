@@ -1,6 +1,8 @@
 use core::fmt;
 use std::ops::Add;
 
+mod indepth_generics;
+mod indepth_lifetimes;
 mod learning_lifetimes;
 mod ownership;
 mod using_traits;
