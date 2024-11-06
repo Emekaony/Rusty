@@ -29,7 +29,20 @@ impl fmt::Display for Point {
     }
 }
 
+// fn largest<T: PartialEq + std::cmp::PartialOrd>(items: &[T]) -> T {
+//     let mut largest: &T = &items[0];
+//     for item in items {
+//         if *item > *largest {
+//             largest = item
+//         }
+//     }
+//     *largest
+// }
+
 fn main() {
-    ownership::run();
-    learning_lifetimes::run();
+    let v = vec![1, 2, 3, 4];
+    let x = &v;
+    for item in x {
+        println!("item is {}", item)
+    }
 }
